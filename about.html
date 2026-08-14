@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>เกี่ยวกับเรา — ALLAI</title>
+<meta name="description" content="เรื่องราวของ ALLAI สตูดิโอเสื้อผ้ามินิมอลจากกรุงเทพฯ ที่ผลิตล็อตเล็ก ใช้ผ้าธรรมชาติ และทำงานกับโรงงานที่จ่ายค่าแรงเป็นธรรม">
+<meta name="theme-color" content="#D9708E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23D9708E'/><text x='50' y='68' font-size='54' font-family='Georgia' fill='white' text-anchor='middle'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="announce">จัดส่งฟรีทั่วประเทศเมื่อช้อปครบ ฿1,500 · <a href="shop.html">ดูคอลเลกชันใหม่</a></div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">ALL<span>AI</span></a>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <div class="nav__item"><a class="nav__link" href="index.html">หน้าแรก</a></div>
+      <div class="nav__item"><a class="nav__link" href="shop.html?cat=">สินค้าใหม่</a></div>
+      <div class="nav__item nav__item--has-menu">
+        <a class="nav__link" href="shop.html">ช้อป</a>
+        <div class="dropdown">
+          <a href="shop.html?cat=tops">เสื้อ <small>Tops</small></a>
+          <a href="shop.html?cat=dresses">เดรส <small>Dresses</small></a>
+          <a href="shop.html?cat=skirts">กระโปรง <small>Skirts</small></a>
+          <a href="shop.html?cat=pants">กางเกง <small>Trousers</small></a>
+          <a href="shop.html?cat=outer">เสื้อคลุม <small>Outerwear</small></a>
+          <a href="shop.html?cat=knit">ไหมพรม <small>Knitwear</small></a>
+          <a href="shop.html?cat=acc">แอคเซสซอรี่ <small>Accessories</small></a>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="index.html#lookbook">ลุคบุ๊ค</a></div>
+      <div class="nav__item"><a class="nav__link is-active" href="about.html">เกี่ยวกับเรา</a></div>
+      <div class="nav__item"><a class="nav__link" href="contact.html">ติดต่อ</a></div>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" data-search aria-label="ค้นหา">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn" href="contact.html" aria-label="บัญชีของฉัน">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+      </a>
+      <a class="icon-btn" href="cart.html" aria-label="ตะกร้าสินค้า">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 7h12l-1.2 13H7.2L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="icon-btn burger" id="burger" aria-label="เปิดเมนู">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="เมนูมือถือ">
+  <div class="drawer__head">
+    <span class="brand">ALL<span>AI</span></span>
+    <button class="icon-btn" id="drawer-close" aria-label="ปิดเมนู">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="shop.html">ช้อปทั้งหมด</a>
+    <a class="sub" href="shop.html?cat=tops">เสื้อ</a>
+    <a class="sub" href="shop.html?cat=dresses">เดรส</a>
+    <a class="sub" href="shop.html?cat=skirts">กระโปรง</a>
+    <a class="sub" href="shop.html?cat=pants">กางเกง</a>
+    <a class="sub" href="shop.html?cat=outer">เสื้อคลุม</a>
+    <a class="sub" href="shop.html?cat=knit">ไหมพรม</a>
+    <a class="sub" href="shop.html?cat=acc">แอคเซสซอรี่</a>
+    <a href="index.html#lookbook">ลุคบุ๊ค</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html">ติดต่อเรา</a>
+    <a href="cart.html">ตะกร้าสินค้า</a>
+  </nav>
+</aside>
+
+<main>
+  <div class="container">
+    <nav class="crumbs" aria-label="เส้นทาง">
+      <a href="index.html">หน้าแรก</a> <span>/</span> <span class="muted">เกี่ยวกับเรา</span>
+    </nav>
+    <header class="page-head" style="max-width:760px">
+      <p class="eyebrow">เรื่องราวของเรา</p>
+      <h1 class="display h1">เสื้อผ้าที่ทำให้<br>ตอนเช้าง่ายขึ้น</h1>
+      <p class="lede">ALLAI เริ่มต้นในปี 2019 จากห้องเช่าเล็ก ๆ ย่านอารีย์
+        ด้วยคำถามเดียวว่า “ทำไมเสื้อผ้าที่ใส่สบายถึงไม่ค่อยสวย และเสื้อผ้าที่สวยถึงไม่ค่อยใส่สบาย”</p>
+    </header>
+  </div>
+
+  <!-- story -->
+  <section class="section--tight">
+    <div class="container split">
+      <div class="split__art" id="about-art"></div>
+      <div class="reveal">
+        <h2 class="display h2" style="margin-bottom:18px">ผลิตทีละล็อตเล็ก<br>ตั้งใจทีละตัว</h2>
+        <p>เราไม่ทำแฟชั่นตามฤดูกาลแบบเร่งรีบ แต่ปล่อยคอลเลกชันปีละ 3 ครั้ง
+          แต่ละครั้งไม่เกิน 20 แบบ เพื่อให้ทีมมีเวลาทดลองผ้า ปรับแพตเทิร์น
+          และตรวจงานทุกตัวก่อนถึงมือคุณ</p>
+        <p>ทุกชิ้นถูกออกแบบให้เข้ากันเองได้ทั้งคอลเลกชัน — เมื่อคุณซื้อเสื้อจาก ALLAI
+          มันจะแมตช์กับกระโปรงและกางเกงที่คุณมีอยู่แล้วเสมอ</p>
+        <p style="margin-top:24px"><a class="btn btn--primary" href="shop.html">ดูคอลเลกชันปัจจุบัน</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- stats -->
+  <section class="section section--blush">
+    <div class="container">
+      <div class="stats">
+        <div class="stat reveal"><strong>2019</strong><span>ปีที่ก่อตั้ง</span></div>
+        <div class="stat reveal"><strong>48k</strong><span>ลูกค้าทั่วประเทศ</span></div>
+        <div class="stat reveal"><strong>4.9</strong><span>คะแนนรีวิวเฉลี่ย</span></div>
+        <div class="stat reveal"><strong>3</strong><span>คอลเลกชันต่อปี</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- sustainability -->
+  <section class="section" id="sustain">
+    <div class="container split">
+      <div class="reveal">
+        <p class="eyebrow">ความยั่งยืน</p>
+        <h2 class="display h2" style="margin-bottom:18px">ทำน้อยลง แต่ทำให้ดี</h2>
+        <p>เราเชื่อว่าเสื้อผ้าที่ยั่งยืนที่สุดคือเสื้อผ้าที่คุณอยากใส่ซ้ำ ๆ อีกหลายปี
+          ทุกการตัดสินใจของเราจึงเริ่มจากคำถามว่า “ตัวนี้จะยังอยู่ในตู้ของลูกค้าในอีก 5 ปีหรือเปล่า”</p>
+        <ul class="usp">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> ผ้าคอตตอนออร์แกนิกและลินินที่ตรวจสอบแหล่งที่มาได้</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> บรรจุภัณฑ์กระดาษรีไซเคิล 100% ไม่ใช้พลาสติกหุ้ม</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> เศษผ้าเหลือส่งต่อให้กลุ่มช่างฝีมือทำของใช้ในบ้าน</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> บริการซ่อมแซมฟรีตลอดอายุการใช้งาน</li>
+        </ul>
+      </div>
+      <div class="split__art" id="about-art-2"></div>
+    </div>
+  </section>
+
+  <!-- timeline -->
+  <section class="section section--blush">
+    <div class="container" style="max-width:780px">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">เส้นทางของเรา</p>
+          <h2 class="display h2">จากห้องเช่า สู่ 48,000 ตู้เสื้อผ้า</h2>
+        </div>
+      </div>
+      <ul class="timeline">
+        <li class="reveal"><time>2019</time><h4>เริ่มต้นด้วยเสื้อเชิ้ต 3 แบบ</h4>
+          <p class="muted">ขายผ่านอินสตาแกรม ตัดเย็บเองในห้องเช่าย่านอารีย์ 120 ตัวแรกหมดใน 2 สัปดาห์</p></li>
+        <li class="reveal"><time>2021</time><h4>เปิดสตูดิโอแรกที่เจริญกรุง</h4>
+          <p class="muted">พร้อมทีมแพตเทิร์นประจำ 3 คน และเริ่มทำงานกับโรงงานพาร์ตเนอร์ในสมุทรปราการ</p></li>
+        <li class="reveal"><time>2023</time><h4>เปลี่ยนมาใช้ผ้าธรรมชาติทั้งหมด</h4>
+          <p class="muted">ยกเลิกผ้าโพลีเอสเตอร์บริสุทธิ์ เหลือเฉพาะคอตตอน ลินิน เทนเซล และเส้นใยรีไซเคิล</p></li>
+        <li class="reveal"><time>2025</time><h4>เปิดบริการซ่อมแซมฟรี</h4>
+          <p class="muted">ส่งเสื้อผ้า ALLAI กลับมาซ่อมได้ตลอดอายุการใช้งาน ปีแรกซ่อมไปกว่า 1,800 ตัว</p></li>
+        <li class="reveal"><time>2026</time><h4>คอลเลกชัน Spring Softness</h4>
+          <p class="muted">คอลเลกชันที่คุณกำลังดูอยู่ — 16 แบบ ในโทนชมพูอ่อน ครีม และขาวนวล</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- team -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">ทีมงาน</p>
+          <h2 class="display h2">คนที่อยู่เบื้องหลัง</h2>
+        </div>
+      </div>
+      <div class="team" id="team-grid">
+        <div class="team__card reveal">
+          <div class="team__ava"></div>
+          <h4>ณัฐธิดา ภาคภูมิ</h4>
+          <p class="muted">ผู้ก่อตั้ง &amp; ครีเอทีฟไดเรกเตอร์</p>
+        </div>
+        <div class="team__card reveal">
+          <div class="team__ava"></div>
+          <h4>กันตพัฒน์ ศรีสุข</h4>
+          <p class="muted">หัวหน้าฝ่ายแพตเทิร์นและการผลิต</p>
+        </div>
+        <div class="team__card reveal">
+          <div class="team__ava"></div>
+          <h4>พิมพ์ชนก เรืองศิลป์</h4>
+          <p class="muted">หัวหน้าฝ่ายดูแลลูกค้าและสไตลิ่ง</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- newsletter -->
+  <section class="section newsletter">
+    <div class="container">
+      <div class="newsletter__box reveal">
+        <p class="eyebrow">จดหมายข่าว</p>
+        <h2 class="display h2">อยากรู้เบื้องหลังคอลเลกชันถัดไป?</h2>
+        <p class="muted">เราเล่าเรื่องผ้า ขั้นตอนการทำแพตเทิร์น และวันเปิดขายก่อนใคร เดือนละ 2 ครั้ง</p>
+        <form class="subscribe" data-mock="ขอบคุณ! คุณอยู่ในรายชื่อผู้รับข่าวแล้ว">
+          <label class="sr-only" for="nl-email">อีเมล</label>
+          <input id="nl-email" type="email" placeholder="อีเมลของคุณ" required>
+          <button class="btn btn--primary" type="submit">สมัครรับข่าว</button>
+        </form>
+        <p class="form-note">เรายกเลิกได้ทุกเมื่อ และไม่ส่งต่อข้อมูลให้ใคร</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html">ALL<span>AI</span></a>
+        <p style="margin-top:14px">เสื้อผ้ามินิมอลสำหรับทุกวัน ตัดเย็บในกรุงเทพฯ
+          จากผ้าธรรมชาติที่ตรวจสอบแหล่งที่มาได้</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"/></svg></a>
+          <a href="#" aria-label="LINE"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10.5c0-4.1-4-7.5-9-7.5s-9 3.4-9 7.5c0 3.7 3.2 6.8 7.5 7.4.3.1.7.2.8.5.1.3.1.7 0 1l-.1.8c0 .2-.2.9.8.5s5.4-3.2 7.4-5.5c1.3-1.4 1.6-2.9 1.6-4.7z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 4c.5 2.4 2 3.8 4.5 4v3c-1.7 0-3.3-.5-4.5-1.4V15a5.5 5.5 0 1 1-5.5-5.5c.3 0 .7 0 1 .1v3.1a2.5 2.5 0 1 0 1.5 2.3V4z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>ช้อป</h5>
+        <ul>
+          <li><a href="shop.html?cat=tops">เสื้อ</a></li>
+          <li><a href="shop.html?cat=dresses">เดรส</a></li>
+          <li><a href="shop.html?cat=skirts">กระโปรง</a></li>
+          <li><a href="shop.html?cat=pants">กางเกง</a></li>
+          <li><a href="shop.html?cat=outer">เสื้อคลุม</a></li>
+          <li><a href="shop.html?cat=acc">แอคเซสซอรี่</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>ช่วยเหลือ</h5>
+        <ul>
+          <li><a href="contact.html#faq">คำถามที่พบบ่อย</a></li>
+          <li><a href="contact.html#faq">การจัดส่ง</a></li>
+          <li><a href="contact.html#faq">คืนและเปลี่ยนสินค้า</a></li>
+          <li><a href="contact.html#faq">ตารางไซส์</a></li>
+          <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>เกี่ยวกับ</h5>
+        <ul>
+          <li><a href="about.html">เรื่องราวของเรา</a></li>
+          <li><a href="about.html#sustain">ความยั่งยืน</a></li>
+          <li><a href="about.html#team">ทีมงาน</a></li>
+          <li><a href="contact.html">ร่วมงานกับเรา</a></li>
+          <li><a href="index.html#lookbook">ลุคบุ๊ค</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> ALLAI Studio Co., Ltd. — สงวนลิขสิทธิ์ · นี่คือเว็บไซต์ตัวอย่าง (mockup)</span>
+      <div class="pay"><span>VISA</span><span>MASTERCARD</span><span>PROMPTPAY</span><span>TRUEMONEY</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

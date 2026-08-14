@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>รายละเอียดสินค้า — ALLAI</title>
+<meta name="description" content="รายละเอียดสินค้า ALLAI — เลือกสี ไซส์ ดูส่วนผสมผ้า วิธีดูแลรักษา และตารางไซส์">
+<meta name="theme-color" content="#D9708E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23D9708E'/><text x='50' y='68' font-size='54' font-family='Georgia' fill='white' text-anchor='middle'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="announce">จัดส่งฟรีทั่วประเทศเมื่อช้อปครบ ฿1,500 · <a href="shop.html">ดูคอลเลกชันใหม่</a></div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">ALL<span>AI</span></a>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <div class="nav__item"><a class="nav__link" href="index.html">หน้าแรก</a></div>
+      <div class="nav__item"><a class="nav__link" href="shop.html?cat=">สินค้าใหม่</a></div>
+      <div class="nav__item nav__item--has-menu">
+        <a class="nav__link" href="shop.html">ช้อป</a>
+        <div class="dropdown">
+          <a href="shop.html?cat=tops">เสื้อ <small>Tops</small></a>
+          <a href="shop.html?cat=dresses">เดรส <small>Dresses</small></a>
+          <a href="shop.html?cat=skirts">กระโปรง <small>Skirts</small></a>
+          <a href="shop.html?cat=pants">กางเกง <small>Trousers</small></a>
+          <a href="shop.html?cat=outer">เสื้อคลุม <small>Outerwear</small></a>
+          <a href="shop.html?cat=knit">ไหมพรม <small>Knitwear</small></a>
+          <a href="shop.html?cat=acc">แอคเซสซอรี่ <small>Accessories</small></a>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="index.html#lookbook">ลุคบุ๊ค</a></div>
+      <div class="nav__item"><a class="nav__link" href="about.html">เกี่ยวกับเรา</a></div>
+      <div class="nav__item"><a class="nav__link" href="contact.html">ติดต่อ</a></div>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" data-search aria-label="ค้นหา">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      </button>
+      <a class="icon-btn" href="contact.html" aria-label="บัญชีของฉัน">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+      </a>
+      <a class="icon-btn" href="cart.html" aria-label="ตะกร้าสินค้า">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 7h12l-1.2 13H7.2L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="icon-btn burger" id="burger" aria-label="เปิดเมนู">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="เมนูมือถือ">
+  <div class="drawer__head">
+    <span class="brand">ALL<span>AI</span></span>
+    <button class="icon-btn" id="drawer-close" aria-label="ปิดเมนู">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="shop.html">ช้อปทั้งหมด</a>
+    <a class="sub" href="shop.html?cat=tops">เสื้อ</a>
+    <a class="sub" href="shop.html?cat=dresses">เดรส</a>
+    <a class="sub" href="shop.html?cat=skirts">กระโปรง</a>
+    <a class="sub" href="shop.html?cat=pants">กางเกง</a>
+    <a class="sub" href="shop.html?cat=outer">เสื้อคลุม</a>
+    <a class="sub" href="shop.html?cat=knit">ไหมพรม</a>
+    <a class="sub" href="shop.html?cat=acc">แอคเซสซอรี่</a>
+    <a href="index.html#lookbook">ลุคบุ๊ค</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html">ติดต่อเรา</a>
+    <a href="cart.html">ตะกร้าสินค้า</a>
+  </nav>
+</aside>
+
+<main id="pdp">
+  <div class="container">
+    <nav class="crumbs" aria-label="เส้นทาง">
+      <a href="index.html">หน้าแรก</a> <span>/</span>
+      <a href="shop.html">ช้อป</a> <span>/</span>
+      <span class="muted" id="crumb-name">สินค้า</span>
+    </nav>
+  </div>
+
+  <div class="container" style="padding-bottom:80px">
+    <div class="pdp">
+
+      <!-- gallery -->
+      <div class="gallery">
+        <div class="gallery__main" id="gallery-main"></div>
+        <div class="gallery__thumbs" id="gallery-thumbs"></div>
+      </div>
+
+      <!-- info -->
+      <div class="pdp__info">
+        <h1 class="pdp__title" id="pdp-title">—</h1>
+        <p class="muted" id="pdp-sub" style="margin-bottom:10px">—</p>
+        <p id="pdp-rating" style="font-size:14px"></p>
+        <p class="pdp__price" id="pdp-price">—</p>
+        <p class="muted" style="font-size:12.5px">ราคารวมภาษีมูลค่าเพิ่มแล้ว · ผ่อน 0% 3 เดือนได้</p>
+
+        <p id="pdp-desc" style="margin-top:20px;color:var(--ink-2)">—</p>
+
+        <div class="opt">
+          <div class="opt__label"><span>สี — <span id="pdp-color-name" style="color:var(--ink)"></span></span></div>
+          <div class="color-opts" id="pdp-colors"></div>
+        </div>
+
+        <div class="opt">
+          <div class="opt__label"><span>ไซส์</span><a href="contact.html#faq">ตารางไซส์</a></div>
+          <div class="size-chips" id="pdp-sizes"></div>
+        </div>
+
+        <div class="opt">
+          <div class="opt__label"><span>จำนวน</span></div>
+          <div class="qty">
+            <button id="qty-minus" aria-label="ลดจำนวน">−</button>
+            <span id="qty-val">1</span>
+            <button id="qty-plus" aria-label="เพิ่มจำนวน">+</button>
+          </div>
+        </div>
+
+        <div class="buy-row">
+          <button class="btn btn--primary" id="add-to-cart">หยิบใส่ตะกร้า</button>
+          <button class="btn btn--dark" id="buy-now">ซื้อเลย</button>
+          <button class="btn btn--ghost" id="pdp-fav" aria-label="บันทึกลงรายการที่ชอบ" style="flex:0 0 auto;padding:13px 16px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </button>
+        </div>
+
+        <ul class="usp">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h13v9H3zM16 11h4l1 3v3h-5z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg> ส่งฟรีเมื่อช้อปครบ ฿1,500 · ส่งภายใน 1–3 วันทำการ</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg> เปลี่ยนไซส์ฟรีภายใน 30 วัน</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.2-2.9 7.5-7 9-4.1-1.5-7-4.8-7-9V6z"/></svg> รับประกันการตัดเย็บ 1 ปี</li>
+        </ul>
+
+        <!-- accordion -->
+        <div class="acc" data-single="false">
+          <div class="acc__item is-open">
+            <button class="acc__btn" aria-expanded="true">รายละเอียดสินค้า
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="acc__panel">
+              <table class="spec-table">
+                <tr><th>ส่วนผสมผ้า</th><td id="spec-material">—</td></tr>
+                <tr><th>รหัสสินค้า</th><td id="spec-code">—</td></tr>
+                <tr><th>ทรง</th><td>Regular fit — พอดีตัว ไม่รัด</td></tr>
+                <tr><th>นางแบบ</th><td>สูง 168 ซม. สวมไซส์ S</td></tr>
+                <tr><th>แหล่งผลิต</th><td>ตัดเย็บในประเทศไทย</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="acc__item">
+            <button class="acc__btn" aria-expanded="false">การดูแลรักษา
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="acc__panel">
+              <ul>
+                <li>ซักมือหรือซักเครื่องโหมดถนอมผ้า น้ำเย็นไม่เกิน 30°C</li>
+                <li>ห้ามใช้สารฟอกขาว และไม่ควรบิดแรง</li>
+                <li>ตากในที่ร่ม ผึ่งลม หลีกเลี่ยงแดดจัด</li>
+                <li>รีดไฟอ่อน หรือรีดกลับด้านเพื่อรักษาผิวผ้า</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc__item">
+            <button class="acc__btn" aria-expanded="false">การจัดส่งและการคืนสินค้า
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="acc__panel">
+              <ul>
+                <li>กรุงเทพฯ และปริมณฑล: 1–2 วันทำการ</li>
+                <li>ต่างจังหวัด: 2–4 วันทำการ</li>
+                <li>ส่งฟรีเมื่อยอดสั่งซื้อครบ ฿1,500 (ต่ำกว่านั้นคิดค่าส่ง ฿60)</li>
+                <li>คืนหรือเปลี่ยนไซส์ได้ภายใน 30 วัน สินค้าต้องยังไม่ผ่านการใช้งานและมีป้ายครบ</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc__item">
+            <button class="acc__btn" aria-expanded="false">ตารางไซส์ (ซม.)
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="acc__panel">
+              <table class="spec-table">
+                <tr><th>ไซส์</th><td>อก / เอว / สะโพก</td></tr>
+                <tr><th>XS</th><td>80 / 62 / 86</td></tr>
+                <tr><th>S</th><td>84 / 66 / 90</td></tr>
+                <tr><th>M</th><td>88 / 70 / 94</td></tr>
+                <tr><th>L</th><td>93 / 75 / 99</td></tr>
+                <tr><th>XL</th><td>98 / 80 / 104</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- related -->
+  <section class="section section--blush">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">อาจถูกใจคุณ</p>
+          <h2 class="display h2">สินค้าที่เกี่ยวข้อง</h2>
+        </div>
+        <a class="link-underline" href="shop.html">ดูทั้งหมด</a>
+      </div>
+      <div class="product-grid" id="grid-related"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html">ALL<span>AI</span></a>
+        <p style="margin-top:14px">เสื้อผ้ามินิมอลสำหรับทุกวัน ตัดเย็บในกรุงเทพฯ
+          จากผ้าธรรมชาติที่ตรวจสอบแหล่งที่มาได้</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"/></svg></a>
+          <a href="#" aria-label="LINE"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10.5c0-4.1-4-7.5-9-7.5s-9 3.4-9 7.5c0 3.7 3.2 6.8 7.5 7.4.3.1.7.2.8.5.1.3.1.7 0 1l-.1.8c0 .2-.2.9.8.5s5.4-3.2 7.4-5.5c1.3-1.4 1.6-2.9 1.6-4.7z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 4c.5 2.4 2 3.8 4.5 4v3c-1.7 0-3.3-.5-4.5-1.4V15a5.5 5.5 0 1 1-5.5-5.5c.3 0 .7 0 1 .1v3.1a2.5 2.5 0 1 0 1.5 2.3V4z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>ช้อป</h5>
+        <ul>
+          <li><a href="shop.html?cat=tops">เสื้อ</a></li>
+          <li><a href="shop.html?cat=dresses">เดรส</a></li>
+          <li><a href="shop.html?cat=skirts">กระโปรง</a></li>
+          <li><a href="shop.html?cat=pants">กางเกง</a></li>
+          <li><a href="shop.html?cat=outer">เสื้อคลุม</a></li>
+          <li><a href="shop.html?cat=acc">แอคเซสซอรี่</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>ช่วยเหลือ</h5>
+        <ul>
+          <li><a href="contact.html#faq">คำถามที่พบบ่อย</a></li>
+          <li><a href="contact.html#faq">การจัดส่ง</a></li>
+          <li><a href="contact.html#faq">คืนและเปลี่ยนสินค้า</a></li>
+          <li><a href="contact.html#faq">ตารางไซส์</a></li>
+          <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>เกี่ยวกับ</h5>
+        <ul>
+          <li><a href="about.html">เรื่องราวของเรา</a></li>
+          <li><a href="about.html#sustain">ความยั่งยืน</a></li>
+          <li><a href="about.html#team">ทีมงาน</a></li>
+          <li><a href="contact.html">ร่วมงานกับเรา</a></li>
+          <li><a href="index.html#lookbook">ลุคบุ๊ค</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> ALLAI Studio Co., Ltd. — สงวนลิขสิทธิ์ · นี่คือเว็บไซต์ตัวอย่าง (mockup)</span>
+      <div class="pay"><span>VISA</span><span>MASTERCARD</span><span>PROMPTPAY</span><span>TRUEMONEY</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
